@@ -13,9 +13,6 @@ router.post("/intervals", (
     const includes = req.body.includes;
     const excludes = req.body.excludes;
 
-    console.log(includes)
-    console.log(excludes)
-
     try {
         const calculator = new IntervalCalculator(includes, excludes);
         const result = calculator.getFormattedResult();
